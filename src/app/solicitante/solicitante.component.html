@@ -1,0 +1,98 @@
+<div class="col-12">
+
+  <form [formGroup]="form">
+    <div class="p-fluid p-formgrid grid">
+      <div class="field col-12 md:col-3 lg:col-3">
+        <p-dropdown [options]="tiposPersona" optionLabel="name" placeholder="Tipo Persona"
+                    formControlName="fcTipoPersona">
+        </p-dropdown>
+      </div>
+
+      <div class="field col-0 md:col-9"></div>
+
+      <div class="field col-12 md:col-3">
+        <p-dropdown [options]="tiposDocumento" optionLabel="name" placeholder="Tipo Documento"
+                    formControlName="fcTipoDocumento">
+        </p-dropdown>
+      </div>
+
+      <div class="field col-12 md:col-3">
+        <span class="p-input-icon-left">
+          <i class="pi pi-book"></i>
+          <p-inputNumber mode="decimal" [useGrouping]="false" [maxlength]="10" placeholder="Número de Documento"
+                         [inputStyle]="{'paddingLeft': '40px'}" formControlName="fcNroDocumento">
+        </p-inputNumber>
+        </span>
+      </div>
+
+      <div class="field col-0 md:col-6"></div>
+
+      <div class="field col-12 md:col-6">
+        <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input pInputText
+                 placeholder="Apellido Paterno"
+                 type="text" formControlName="fcApellidoPaterno"/>
+        </span>
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input pInputText
+                 placeholder="Apellido Materno"
+                 type="text" formControlName="fcApellidoMaterno"/>
+        </span>
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input pInputText
+                 placeholder="Nombres"
+                 type="text" formControlName="fcNombres"/>
+        </span>
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <span class="p-input-icon-left">
+          <i class="pi pi-phone"></i>
+          <p-inputNumber mode="decimal" [useGrouping]="false" [maxlength]="10" placeholder="Teléfono"
+                         [inputStyle]="{'paddingLeft': '40px'}" formControlName="fcTelefono">
+          </p-inputNumber>
+        </span>
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <span class="p-input-icon-left">
+          <i class="pi pi-envelope"></i>
+          <input pInputText
+                 placeholder="Correo"
+                 type="text" formControlName="fcCorreo"/>
+        </span>
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <span class="p-input-icon-left">
+          <i class="pi pi-map"></i>
+          <input pInputText
+                 placeholder="Dirección"
+                 type="text" formControlName="fcDireccion"/>
+        </span>
+      </div>
+
+<!--      <div class="field col-12 md:col-3">-->
+<!--        <button pButton-->
+<!--                pRipple-->
+<!--                [disabled]="!form.valid"-->
+<!--                type="button"-->
+<!--                (click)="onNext()"-->
+<!--                icon="pi pi-arrow-right"-->
+<!--                label="Siguiente">-->
+<!--        </button>-->
+<!--      </div>-->
+
+    </div>
+  </form>
+
+</div>
